@@ -160,7 +160,7 @@ public class Kalkulator {
     }
 
     public Kalkulator() {
-        JFrame frame = new JFrame("KALKULATOR - ALEKSANRA BANASIEWICZ");
+        JFrame frame = new JFrame("KALKULATOR");
         frame.setContentPane(createContentPane());
         frame.setSize(375, 567);
         frame.setLocationRelativeTo(null);
