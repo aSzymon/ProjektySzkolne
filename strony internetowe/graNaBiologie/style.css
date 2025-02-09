@@ -1,0 +1,25 @@
+* {
+    font-family:sans-serif;
+}
+
+#pionek {
+    /* background-color: rgb(87, 60, 81); */
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 60px;
+    top: -140px;
+    bottom: 0px;
+    right: 0px;
+    border-radius:30px
+}
+
+#przyciskKostka {
+    background-color: rgb(121, 121, 112);
+    width: 135px;
+    height: 50px;
+    left: 800px;
+    top: -140px;
+    position: relative;
+    border-radius:10px
+}

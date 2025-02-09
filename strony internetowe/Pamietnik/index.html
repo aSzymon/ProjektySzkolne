@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pamiętnik</title>
+	<meta charset="utf-8">
+	<!-- <script type="text/javascript" src="index.js"></script> -->
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+	<div id="container">
+
+			<div id="naglowek"><center id='naglowek1'>❤ 💬 ✨ ᴘᴀᴍɪᴇ̨ᴛɴɪᴄᴢᴇᴋ ✨ 💬 ❤</center></div>
+			<div id="godzina"></div>
+			<div id="zdjecie"></div>
+
+
+			<!-- panel ustawienia -->
+			<div id="panel">
+
+				<b><center id="panelnapis">PANEL USTAWIENIA</center></b>
+
+				<!-- dodawanie notki -->
+				<b><p id="napisusun">Usuwanie notatki</p></b>
+				<input type = "text" id = "idDoUsuniecia" placeholder = "wpisz ID do usunięcia">
+				<button id = "zatwierdzanieUsuniecia" onclick = "usuwanie()">Usuń</button><br>
+				<button id = "dn" onclick = "dodNot()">Dodanie notatki</button>
+
+				<!-- miejsce do zmiany notatek -->
+				<b><div id = "oddzielanie1">Zmiana Notatki :3</div></b>
+				<textarea id="zn1" cols="24" rows="10" placeholder = "wpisz swoje notatki"></textarea>
+
+			</div>
+
+			<!-- Miejsce do wpisów -->
+			<div id="polewpisow"></div>
+
+
+			<!-- Do "NOTATKI" -->
+			<b><div id="notki"><p id="notki1"><center>NOTATKI</center></p></b>
+				<div id="podnotatki"><i id="osobie">Jakieś notatki....<i></div>
+			</div>
+			<div id="zn"><button onclick="zmianNot()">Zmiana Notatki</button></div>
+
+
+
+			<!-- Do zegarka -->
+			<body onload="zegarek()">
+			<div id="zegar"></div>
+			<div id="zegar2"></div>
+
+	</div>
+
+
+<!-- ------------------------------------------------------------------------------------------------------>
+
+		 <script>
+
+		 var istnieje = false; // zmienna potrzeba do if'a do okienka
+		 var licznikDivov = 0; // licznik divov jest po to aby nadać id divom do usuwania
+
+		// ---------------------- Do zegara ------------------------
+        function zegarek()
+        {
+
+            var data = new Date();
+            var godzina = data.getHours();
+            var minuta = data.getMinutes();
+            var sekunda = data.getSeconds();
+            var dzien = data.getDate();
+            var dzienN = data.getDay();
+            var miesiac = data.getMonth();
+            var rok = data.getFullYear();
+
+            if (minuta < 10) minuta = "0" + minuta;
+            if (sekunda < 10) sekunda = "0" + sekunda;
+
+            var miesiace = new Array("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia");
+
+            var pData = godzina + ':' + minuta + ':' + sekunda;
+
+            var pData2 = dzien + ' ' + miesiace[miesiac] + ' ' + rok + " rok ";
+
+            document.getElementById("zegar").innerHTML = pData;
+            document.getElementById("zegar2").innerHTML = pData2;
+
+            setTimeout(zegarek, 1000);
+
+        }
+
+
+        // ---------------------- do zmiany notatki ------------------------
+		function zmianNot()	{
+
+			document.getElementById("osobie").innerHTML = document.getElementById("zn1").value;
+		}
+
+		// ---------------------- Dodawanie notki ------------------------
+		function dodNot()	{
+			var pglowne = document.getElementById('panel');
+			var div = document.createElement("div");
+			var przycisk = document.getElementById("dn");
+			var poleTekstowe = document.createElement("textarea");
+			var przycizg = document.createElement("button");
+
+
+			przycisk.onload = dodawanieNotatki();
+
+			poleTekstowe.type = "text";
+			poleTekstowe.id = "poleTekstowe";
+			div.id = 'okienko';
+			przycizg.id = 'przycizgklik';
+
+
+			if(!istnieje)	{
+				pglowne.appendChild(div);
+				istnieje =  true;
+				przycisk.textContent = 'Dodaj Notatke';
+				div.appendChild(poleTekstowe);
+			} else {
+				document.getElementById('okienko').remove();
+				istnieje = false;
+				przycisk.textContent = 'Dodanie notatek';
+			}
+		}
+
+
+		function dodawanieNotatki()	{
+			if(istnieje)	{
+				var poleTekstowe = document.getElementById("poleTekstowe").value;
+				var poleNotatek = document.getElementById("polewpisow");
+				var notatka = document.createElement("div");
+				var idDiva = 'd'+licznikDivov;
+				notatka.id = idDiva;
+				var tekstNotatki = '<i><br/> ID notatki</i> ' + licznikDivov + ' : ' + poleTekstowe;
+				licznikDivov++;
+				notatka.innerHTML = tekstNotatki;
+				poleNotatek.appendChild(notatka);
+			}
+		}
+
+
+		function usuwanie()	{
+			var usuwanieId = document.getElementById("idDoUsuniecia").value;
+			document.getElementById('d'+usuwanieId).innerHTML = '';
+		}
+
+    </script>
+
+</body>
+</html>

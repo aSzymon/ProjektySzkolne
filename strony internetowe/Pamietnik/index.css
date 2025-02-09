@@ -1,0 +1,209 @@
+body {
+	background-color: #fac5f5;
+	font-family: lato;
+}
+
+
+
+#naglowek {
+	background-color: #cf65c6;
+	position: absolute;
+	height: 90px;
+	width: 1270px;
+	left: 40px;
+
+}
+
+#godzina {
+	background-color: #de81d6;
+	position: absolute;
+	height: 90px;
+	width: 200px;
+	left: 1350px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+#zdjecie {
+	background-image: url(profilowe.jpg);
+	background-repeat;
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	top: 120px;
+	left: 40px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+#notki {
+	background-color: #cf65c6;
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	top: 350px;
+	left: 40px;
+	width: 200px;
+	height: 380px;
+}
+
+#panel {
+	background-color: #cf65c6;
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	top: 120px;
+	left: 1350px;
+	width: 200px;
+	height: 610px;
+}
+
+#polewpisow {
+	background-color: #de81d6;
+	position: absolute;
+	height: 610px;
+	width: 1050px;
+	left: 260px;
+	top: 120px;
+}
+
+#podnotatki {
+	background-color: #de81d6;
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	top: 45px;
+	left: 15px;
+	width: 170px;
+	height: 320px;
+}
+
+#naglowek1 {
+	font-size: 60px;
+}
+
+#panelnapis {
+	position: absolute;
+	top: 20px;
+	left: 25px;
+}
+
+#zn {
+	position: absolute;
+	left: 1400px;
+	top: 670px;
+
+}
+
+#zn1 {
+	position: absolute;
+	top: 56%;
+	left: 9%;
+	height: 30%;
+	text-align: center;
+	resize: none;
+}
+
+#zegar {
+	position: absolute;
+	height: 70px;
+	width: 180px;
+	left: 1370px;
+	top: 45px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	font-size: 40px;
+}
+
+#zegar2 {
+	position: absolute;
+	height: 70px;
+	width: 180px;
+	left: 1370px;
+	top: 15px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	font-size: 20px;
+}
+
+
+#okienko {
+	width: 30%;
+	height: 30%;
+	background: #fac5f5;
+	z-index: 999;
+	border-style: solid;
+	border-color: white;
+}
+
+#poleTekstowe {
+	position: absolute;
+	top: 10%;
+}
+
+#przyciskZatwierdzenia {
+	position: absolute;
+	top: 15%;
+}
+
+#usuwanie {
+	position: absolute;
+	left: 30%;
+}
+
+
+#oddzielanie1 {
+	position: absolute;
+	top:50%;
+	left: 40px;
+}
+
+
+#idDoUsuniecia {
+	position: absolute;
+	top: 110px;
+	width: 100px;
+	left: 15px;
+}
+
+#zatwierdzanieUsuniecia {
+	position: absolute;
+	top:110px;
+	left: 140px;
+}
+
+#dn {
+	position: absolute;
+	top: 200px;
+	left: 45px;
+}
+
+#napisusun {
+	position: absolute;
+	top: 60px;
+	left: 40px;
+}
+
+
+#okienko {
+	position: absolute;
+	top: 200px;
+	height: 120px;
+	width: 400px;
+	right: 550px;
+}
+
+#poleTekstowe {
+	height: 60px;
+	left: 15px;
+	width: 360px;
+	resize: none;
+}
